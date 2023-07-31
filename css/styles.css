@@ -1,0 +1,254 @@
+.navbar-text{
+   color: rgb(149, 111, 185);     
+   font-size: 25px;
+   margin-right: 35px;
+}
+
+
+.navbar-brand {
+  font-family: 'Cormorant Garamond', serif;
+   color: rgb(149, 111, 185);     
+   font-size: 30px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(149, 111, 185, 0.267);     
+}
+
+/*.producto {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.producto img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.producto h4 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.producto p {
+  font-size: 16px;
+}*/
+
+body {
+  background-color: #f8f8f8;
+}
+
+.productos {
+  overflow: hidden;
+  background-color: #f8f8f8;
+  padding: 0px 0;
+  margin-top: 200px;
+}
+
+.title-productos{
+  text-decoration: underline;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.cuadrado {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 7px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.cuadrado img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.btn-ver {
+  margin-top: 7px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #956fb970;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .cuadrado {
+    padding: 10px;
+  }
+}
+
+.btn-ver:hover  {
+color: rgba(0, 0, 0, 0.493);
+}
+
+.contacto {
+  margin-top: 100px;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.title-contacto {
+  position: relative;
+  display: inline-block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.subtitulo-newsletter {
+  position: relative;
+  display: inline-block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.title-contacto::before,
+.title-contacto::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50px; /* Ancho de las líneas */
+  height: 1px; /* Grosor de las líneas */
+  background-color: #7d52a3a8; /* Color de las líneas */
+}
+
+.title-contacto::before {
+  left: -40px; /* Posición de la línea izquierda */
+}
+
+.title-contacto::after {
+  right: -40px; /* Posición de la línea derecha */
+}
+
+.newsletter {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.subtitulo-newsletter {
+  margin-bottom: 20px;
+}
+
+.formulario-newsletter {
+  margin-bottom: 20px;
+}
+
+.formulario-newsletter input[type="text"],
+.formulario-newsletter input[type="email"] {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.formulario-newsletter button {
+  font-family: 'Cormorant Garamond', serif;
+  width: 150px;
+  background-color: #956fb9;
+  color: #fff;
+  border: none;
+}
+
+.formulario-newsletter button:hover {
+  background-color: #7d52a3;
+}
+
+.title-footer {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  color: #956fb9;
+}
+
+.linea-divisora {
+  border: none;
+  border-top: 1.5px solid #7d52a3;
+  margin-top: 40px;
+}
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+.redes-sociales {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #00000093;
+}
+
+.social-icon:hover {
+  color: #7d52a3c5;
+}
+
+.container-footer {
+  margin-top: 30px;
+  font-family: 'Cormorant Garamond', serif;
+  overflow: hidden;
+}
+
+.parrafo-footer {
+  font-size: 20px;
+}
+.footer-column {
+  font-size: 35px;
+}
+
+.product-card {
+  text-align: center;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 1px;
+  background-color: #7d52a342;
+}
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 500px;
+}
+.product-card h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.product-card p {
+  margin-bottom: 10px;
+}
+
+.container {
+  margin-top: 80px;
+}
+
+.title-shop{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.btn {
+ background-color: #5a295849;
+}
+
+.text-product  {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+ }
+
