@@ -276,13 +276,10 @@ productosContainer.addEventListener('click', (event) => {
       const productToAdd = productosPorCategoria[productIndex];
       console.log(`Producto agregado al carrito: ${productToAdd.nombre}`);
       
-      // Obtener la lista de productos guardados en localStorage
       const productosEnCarrito = JSON.parse(localStorage.getItem('productosEnCarrito')) || [];
-      
-      // Agregar el producto seleccionado a la lista
+
       productosEnCarrito.push(productToAdd);
       
-      // Guardar la lista actualizada en localStorage
       localStorage.setItem('productosEnCarrito', JSON.stringify(productosEnCarrito));
     } else {
       console.log('Error: Producto no encontrado');
@@ -291,17 +288,11 @@ productosContainer.addEventListener('click', (event) => {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  // Cargar los productos desde localStorage
+
   const productosEnCarrito = JSON.parse(localStorage.getItem('productosEnCarrito')) || [];
-  
-  // Aquí puedes hacer lo que necesites con los productos en el carrito
-  // Puede ser mostrarlos en la interfaz gráfica o realizar algún cálculo
-  
-  // Ejemplo: Imprimir los nombres de los productos en la consola
+
   productosEnCarrito.forEach(producto => {
     console.log(`Producto en el carrito: ${producto.nombre}`);
   });
   
-  // Luego, puedes llamar a la función cargarProductos() para mostrar los productos en la página
-  cargarProductos();
 });
