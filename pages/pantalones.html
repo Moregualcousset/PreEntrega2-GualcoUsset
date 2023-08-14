@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-categoria="pantalones">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="../index.html">MALARIA</a>
@@ -39,55 +39,7 @@
       <section id="shop">
         <h1 data-aos="zoom-in-down" class="title-shop"><strong>PANTALONES</strong></h1>
         <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="product-card">
-                <img src="../img/pantalones/pantalonuno.jpg" alt="Producto 18">
-                <h4 class="text-product">Pantalon gabardina oscuro</h4>
-                <p>$7900</p>
-                <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="product-card">
-                <img src="../img/pantalones/pantalondos.jpg" alt="Producto 19">
-                <h4 class="text-product">Pantalon sastrero</h4>
-                <p>$9599</p>
-                <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-              </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/pantalones/pantalontres.jpg" alt="Producto 20">
-                  <h4 class="text-product">Pantalon chupin algodon</h4>
-                  <p>$8500</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/pantalones/pantaloncuatro.jpg" alt="Producto 21">
-                  <h4 class="text-product">Pantalon tiro alto de algodon</h4>
-                  <p>$7500</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/pantalones/pantaloncinco.jpg" alt="Producto 22">
-                  <h4 class="text-product">Pantalon suelto de gabardina</h4>
-                  <p>$8600</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/pantalones/pantalonseis.jpg" alt="Producto 23">
-                  <h4 class="text-product">Pantalon estilo babucha cargo</h4>
-                  <p>$8999</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
+          <div class="row" id="productos-container"></div>
       <hr class="linea-divisora">
       <footer>
         <h2 data-aos="fade-down" class="title-footer"><strong>SEGUINOS</strong></h2>
@@ -122,6 +74,7 @@
           </div>
         </div>
       </footer>   
+      <script src="../index.js"></script>
       <script src="../js/bootstrap.bundle.min.js"></script>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>

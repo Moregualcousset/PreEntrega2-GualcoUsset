@@ -1,237 +1,307 @@
-// Funcion de registrar
-function mostrarBienvenida() {
-  let nombre = "";
-  while (!nombre || nombre.trim() === "") {
-    nombre = prompt("¡Bienvenido a nuestro sitio! Por favor, ingresa tu nombre:");
-  }
-
-  let contrasena = "";
-  while (contrasena.trim() === "") {
-    contrasena = prompt("Hola, " + nombre + ". Ahora, ingresa tu contraseña:");
-  }
-
-  alert("¡Bienvenido, " + nombre + "!");
-}
-
-window.onload = function () {
-  mostrarBienvenida();
-};
-
-
-//array de objetos de productos
-const productos = [
+let productos = [
   {
-    nombre: "Producto 1",
+    nombre: "Buzo de lana suelto",
     precio: 4500,
-    categoria: "Buzo",
+    categoria: "buzos",
+    imagen: "../img/buzos/producto1.jpg"
   },
   {
-    nombre: "Producto 2",
+    nombre: "Buzo clasico de algodon",
     precio: 3500,
-    categoria: "Buzo",
+    categoria: "buzos",
+    imagen: "../img/buzos/producto2.jpg"
   },
   {
-    nombre: "Producto 3",
+    nombre: "Buzo de algodon finito",
     precio: 2499,
-    categoria: "Buzo",
+    categoria: "buzos",
+    imagen: "../img/buzos/producto3.jpg"
   },
   {
-    nombre: "Producto 4",
+    nombre: "Buzo corto liso de algodon",
     precio: 3600,
-    categoria: "Buzo",
+    categoria: "buzos",
+    imagen: "../img/buzos/producto4.jpg"
   },
   {
-    nombre: "Producto 5",
+    nombre: "Buzo de algodon liso con bolsillos",
     precio: 5000,
-    categoria: "Buzo",
+    categoria: "buzos",
+    imagen: "../img/buzos/producto5.jpg"
   },
   {
-    nombre: "Producto 6",
+    nombre: "Buzo back off de algodon",
     precio: 3999,
-    categoria: "Buzo",
+    categoria: "buzos",
+    imagen: "../img/buzos/producto6.jpg"
   },
   {
-    nombre: "Producto 7",
+    nombre: "Campera kinnestorm roja",
     precio: 8500,
-    categoria: "Campera",
+    categoria: "camperas",
+    imagen: "../img/camperas/producto7.jpg"
   },
   {
-    nombre: "Producto 8",
+    nombre: "Campera de cuero clasica",
     precio: 8599,
-    categoria: "Campera",
+    categoria: "camperas",
+    imagen: "../img/camperas/producto8.jpg"
   },
   {
-    nombre: "Producto 9",
+    nombre: "Campera de cuero corta",
     precio: 7900,
-    categoria: "Campera",
+    categoria: "camperas",
+    imagen: "../img/camperas/producto9.jpg"
   },
   {
-    nombre: "Producto 10",
+    nombre: "Saco de lana",
     precio: 7300,
-    categoria: "Campera",
+    categoria: "camperas",
+    imagen: "../img/camperas/producto10.jpg"
   },
   {
-    nombre: "Producto 11",
+    nombre: "Blaizzer rojo largo",
     precio: 8699,
-    categoria: "Ropa",
+    categoria: "camperas",
+    imagen: "../img/camperas/producto11.jpg"
   },
   {
-    nombre: "Producto 12",
+    nombre: "Jean oxford liso negro",
     precio: 5799,
-    categoria: "Jean",
+    categoria: "jeans",
+    imagen: "../img/jeans/producto12.jpg"
   },
   {
-    nombre: "Producto 13",
+    nombre: "Jean acampanado celeste",
     precio: 5700,
-    categoria: "Jean",
+    categoria: "jeans",
+    imagen: "../img/jeans/producto13.jpg"
   },
   {
-    nombre: "Producto 14",
+    nombre: "Jean estilo babucha baige",
     precio: 6500,
-    categoria: "Jean",
+    categoria: "jeans",
+    imagen: "../img/jeans/producto14.jpg"
   },
   {
-    nombre: "Producto 15",
+    nombre: "Jean vintage",
     precio: 5700,
-    categoria: "Jean",
+    categoria: "jeans",
+    imagen: "../img/jeans/producto15.jpg"
   },
   {
-    nombre: "Producto 16",
+    nombre: "Jean tiro alto oscuro roto",
     precio: 7000,
-    categoria: "Jean",
+    categoria: "jeans",
+    imagen: "../img/jeans/producto16.jpg"
   },
   {
-    nombre: "Producto 17",
+    nombre: "Jean acampanado metalizado",
     precio: 5200,
-    categoria: "Jean",
+    categoria: "jeans",
+    imagen: "../img/jeans/producto17.jpg"
   },
   {
-    nombre: "Producto 18",
+    nombre: "Pantalon gabardina oscuro",
     precio: 7900,
-    categoria: "Pantalon",
+    categoria: "pantalones",
+    imagen: "../img/pantalones/producto18.jpg"
   },
   {
-    nombre: "Producto 19",
+    nombre: "Pantalon sastrero",
     precio: 9599,
-    categoria: "Pantalon",
+    categoria: "pantalones",
+    imagen: "../img/pantalones/producto19.jpg"
   },
   {
-    nombre: "Producto 20",
+    nombre: "Pantalon chupin algodon",
     precio: 8500,
-    categoria: "Pantalon",
+    categoria: "pantalones",
+    imagen: "../img/pantalones/producto20.jpg"
   },
   {
-    nombre: "Producto 21",
+    nombre: "Pantalon tiro alto de algodon",
     precio: 7500,
-    categoria: "Pantalon",
+    categoria: "pantalones",
+    imagen: "../img/pantalones/producto21.jpg"
   },
   {
-    nombre: "Producto 22",
+    nombre: "Pantalon suelto de gabardina",
     precio: 8600,
-    categoria: "Pantalon",
+    categoria: "pantalones",
+    imagen: "../img/pantalones/producto22.jpg"
   },
   {
-    nombre: "Producto 23",
+    nombre: "Pantalon estilo babucha cargo",
     precio: 8999,
-    categoria: "Pantalon",
+    categoria: "pantalones",
+    imagen: "../img/pantalones/producto23.jpg"
   },
   {
-    nombre: "Producto 24",
+    nombre: "Remera manga corta lisa",
     precio: 3500,
-    categoria: "Remera",
+    categoria: "remeras",
+    imagen: "../img/remeras/producto24.jpg"
   },
   {
-    nombre: "Producto 25",
+    nombre: "Top haily escotado",
     precio: 4300,
-    categoria: "Remera",
+    categoria: "remeras",
+    imagen: "../img/remeras/producto25.jpg"
   },
   {
-    nombre: "Producto 26",
+    nombre: "Remera floriada corta",
     precio: 2700,
-    categoria: "Remera",
+    categoria: "remeras",
+    imagen: "../img/remeras/producto26.jpg"
   },
   {
-    nombre: "Producto 27",
+    nombre: "Camisa suelta mostaza",
     precio: 3000,
-    categoria: "Remera",
+    categoria: "remeras",
+    imagen: "../img/remeras/producto27.jpg"
   },
   {
-    nombre: "Producto 28",
+    nombre: "Top mary con mangas largas",
     precio: 3500,
-    categoria: "Remeras",
+    categoria: "remeras",
+    imagen: "../img/remeras/producto28.jpg"
   },
   {
-    nombre: "Producto 29",
+    nombre: "Remera con bolados lisa",
     precio: 3200,
-    categoria: "Remera",
+    categoria: "remeras",
+    imagen: "../img/remeras/producto29.jpg"
   },
   {
-    nombre: "Producto 30",
+    nombre: "Camisa de algodon negra",
     precio: 4000,
-    categoria: "Remera",
+    categoria: "remeras",
+    imagen: "../img/remeras/producto30.jpg"
   },
   {
-    nombre: "Producto 31",
+    nombre: "Vestido leila con tiras de strass",
     precio: 7399,
-    categoria: "Vestido",
+    categoria: "vestidos",
+    imagen: "../img/vestidos/producto31.jpg"
   },
   {
-    nombre: "Producto 32",
+    nombre: "Vestido liso largo de una manga",
     precio: 9500,
-    categoria: "Vestido",
+    categoria: "vestidos",
+    imagen: "../img/vestidos/producto32.jpg"
   },
   {
-    nombre: "Producto 33",
+    nombre: "Vestido largo mediano de algodon",
     precio: 9500,
-    categoria: "Vestido",
+    categoria: "vestidos",
+    imagen: "../img/vestidos/producto33.jpg"
   },
   {
-    nombre: "Producto 34",
+    nombre: "Vestido de brillos corto",
     precio: 8299,
-    categoria: "Vestido",
+    categoria: "vestidos",
+    imagen: "../img/vestidos/producto34.jpg"
   },
   {
-    nombre: "Producto 35",
+    nombre: "Vestido liso a medida en los lados",
     precio: 7800,
-    categoria: "Vestido",
+    categoria: "vestidos",
+    imagen: "../img/vestidos/producto35.jpg"
   },
   {
-    nombre: "Producto 36",
+    nombre: "Vestido ajustado corto con bolados",
     precio: 6999,
-    categoria: "Vestido",
+    categoria: "vestidos",
+    imagen: "../img/vestidos/producto36.jpg"
   },
 ];
+localStorage.setItem("productos", JSON.stringify(productos));
 
-// Find
-const nombreProductoBuscado = "Producto 30";
-const productoBuscado = productos.find((producto) => producto.nombre === nombreProductoBuscado);
+localStorage.setItem("productosStringify", JSON.stringify(productos));
 
-if (productoBuscado) {
-  console.log("Producto encontrado:", productoBuscado);
-} else {
-  console.log("Producto no encontrado");
+let productosStringify = localStorage.getItem("productosStringify");
+
+let productosParseados = JSON.parse(localStorage.getItem("productosStringify"));
+
+const productosContainer = document.getElementById("productos-container")
+
+const categoria = document.querySelector('body').getAttribute('data-categoria');
+
+const productosPorCategoria = productos.filter(producto => producto.categoria === categoria);
+
+function cargarProductos() {
+  const productosContainer = document.querySelector('#productos-container');
+
+  productosPorCategoria.forEach((producto, indice) => {
+    const productoDiv = crearProductoDOM(producto, indice);
+    productosContainer.appendChild(productoDiv);
+  });
 }
 
-// Array para sumar productos
-function sumarProductos(arrayProductos, ...nombresProductos) {
-  let suma = 0;
-  for (const nombreProducto of nombresProductos) {
-    const productoEncontrado = arrayProductos.find(
-      (producto) => producto.nombre === nombreProducto
-    );
-    if (productoEncontrado) {
-      suma += productoEncontrado.precio;
+function crearProductoDOM(producto, indice) {
+  const productoDiv = document.createElement('div');
+  const imagen = document.createElement('img');
+  imagen.src = producto.imagen;
+  productoDiv.appendChild(imagen);
+  productoDiv.classList.add('product-card');
+
+  const nombre = document.createElement('h4');
+  nombre.classList.add('text-product');
+  nombre.textContent = producto.nombre;
+  productoDiv.appendChild(nombre);
+
+  const precio = document.createElement('p');
+  precio.textContent = `$${producto.precio}`;
+  productoDiv.appendChild(precio);
+
+  const boton = document.createElement('button');
+  boton.classList.add('btn', 'btn-sm', 'btn-outline-dark', 'add-to-cart-btn');
+  boton.textContent = 'Agregar al carrito';
+  boton.setAttribute('data-product', indice);
+  productoDiv.appendChild(boton);
+
+  return productoDiv;
+}
+
+window.addEventListener('DOMContentLoaded', cargarProductos);
+
+console.log(productosPorCategoria)
+
+productosContainer.addEventListener('click', (event) => {
+  if (event.target.classList.contains('add-to-cart-btn')) {
+    const productIndex = parseInt(event.target.getAttribute('data-product'));
+    
+    if (!isNaN(productIndex) && productIndex >= 0 && productIndex < productosPorCategoria.length) {
+      const productToAdd = productosPorCategoria[productIndex];
+      console.log(`Producto agregado al carrito: ${productToAdd.nombre}`);
+      
+      // Obtener la lista de productos guardados en localStorage
+      const productosEnCarrito = JSON.parse(localStorage.getItem('productosEnCarrito')) || [];
+      
+      // Agregar el producto seleccionado a la lista
+      productosEnCarrito.push(productToAdd);
+      
+      // Guardar la lista actualizada en localStorage
+      localStorage.setItem('productosEnCarrito', JSON.stringify(productosEnCarrito));
     } else {
-      console.log(`Producto '${nombreProducto}' no encontrado.`);
+      console.log('Error: Producto no encontrado');
     }
   }
-  return suma;
-}
+});
 
-// Ejemplo de suma
-const total = sumarProductos(productos, "Producto 20", "Producto 13");
-console.log("Total:", total);
-
-
-
-
+window.addEventListener('DOMContentLoaded', () => {
+  // Cargar los productos desde localStorage
+  const productosEnCarrito = JSON.parse(localStorage.getItem('productosEnCarrito')) || [];
+  
+  // Aquí puedes hacer lo que necesites con los productos en el carrito
+  // Puede ser mostrarlos en la interfaz gráfica o realizar algún cálculo
+  
+  // Ejemplo: Imprimir los nombres de los productos en la consola
+  productosEnCarrito.forEach(producto => {
+    console.log(`Producto en el carrito: ${producto.nombre}`);
+  });
+  
+  // Luego, puedes llamar a la función cargarProductos() para mostrar los productos en la página
+  cargarProductos();
+});

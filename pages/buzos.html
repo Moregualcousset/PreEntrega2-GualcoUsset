@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-categoria="buzos">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="../index.html">MALARIA</a>
@@ -39,55 +39,7 @@
       <section id="shop">
         <h1 data-aos="zoom-in-down" class="title-shop"><strong>BUZOS</strong></h1>
         <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="product-card">
-                <img src="../img/buzos/buzouno.jpg" alt="Producto 1">
-                <h4 class="text-product">Buzo de lana suelto</h4>
-                <p>$4500</p>
-                <button class="btn btn-sm btn-outline-dark add-to-cart-btn">Agregar al carrito</button>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="product-card">
-                <img src="../img/buzos/buzodos.jpg" alt="Producto 2">
-                <h4 class="text-product">Buzo clasico de algodon</h4>
-                <p>$3500</p>
-                <button class="btn btn-sm btn-outline-dark add-to-cart-btn">Agregar al carrito</button>
-              </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/buzos/buzotres.jpg" alt="Producto 3">
-                  <h4 class="text-product">Buzo de algodon finito</h4>
-                  <p>$2499</p>
-                  <button class="btn btn-sm btn-outline-dark add-to-cart-btn">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/buzos/buzocuatro.jpg" alt="Producto 4">
-                  <h4 class="text-product">Buzo corto liso de algodon</h4>
-                  <p>$3600</p>
-                  <button class="btn btn-sm btn-outline-dark add-to-cart-btn">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/buzos/buzocinco.jpg" alt="Producto 5">
-                  <h4 class="text-product">Buzo de algodon liso con bolsillos</h4>
-                  <p>$5000</p>
-                  <button class="btn btn-sm btn-outline-dark add-to-cart-btn">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/buzos/buzoseis.jpg" alt="Producto 6">
-                  <h4 class="text-product">Buzo back off de algodon</h4>
-                  <p>$3999</p>
-                  <button class="btn btn-sm btn-outline-dark add-to-cart-btn">Agregar al carrito</button>
-                </div>
-              </div>
+          <div class="row" id="productos-container"></div>
       </section>
       <hr class="linea-divisora">
       <footer>
@@ -123,6 +75,7 @@
           </div>
         </div>
       </footer>   
+      <script src="../index.js"></script>
       <script src="../js/bootstrap.bundle.min.js"></script>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>

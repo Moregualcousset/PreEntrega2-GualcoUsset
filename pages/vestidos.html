@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-categoria="vestidos">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="../index.html">MALARIA</a>
@@ -39,55 +39,7 @@
       <section id="shop">
         <h1 data-aos="zoom-in-down" class="title-shop"><strong>VESTIDOS</strong></h1>
         <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="product-card">
-                <img src="../img/vestidos/vestidouno.jpg" alt="Producto 31">
-                <h4 class="text-product">Vestido leila con tiras de strass</h4>
-                <p>$7399</p>
-                <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="product-card">
-                <img src="../img/vestidos/vestidonueve.jpg" alt="Producto 32">
-                <h4 class="text-product">Vestido liso largo de una manga</h4>
-                <p>$9500</p>
-                <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-              </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/vestidos/vestidotres.jpg" alt="Producto 33">
-                  <h4 class="text-product">Vestido largo mediano de algodon</h4>
-                  <p>$9500</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/vestidos/vestidocuatro.jpg" alt="Producto 34">
-                  <h4 class="text-product">Vestido de brillos corto</h4>
-                  <p>$8299</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/vestidos/vestidoseis.jpg" alt="Producto 35">
-                  <h4 class="text-product">Vestido liso a medida en los lados</h4>
-                  <p>$7800</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/vestidos/vestidosiete.jpg" alt="Producto 36">
-                  <h4 class="text-product">Vestido ajustado corto con bolados</h4>
-                  <p>$6999</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
+          <div class="row" id="productos-container"></div>
       </section>
       <hr class="linea-divisora">
       <footer>
@@ -122,7 +74,8 @@
             </div>
           </div>
         </div>
-      </footer>   
+      </footer>  
+      <script src="../index.js"></script>
       <script src="../js/bootstrap.bundle.min.js"></script>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>

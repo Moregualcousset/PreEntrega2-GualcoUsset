@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-categoria="jeans">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="../index.html">MALARIA</a>
@@ -39,55 +39,7 @@
       <section id="shop">
         <h1 data-aos="zoom-in-down" class="title-shop"><strong>JEANS</strong></h1>
         <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="product-card">
-                <img src="../img/jeans/jeansuno.jpg" alt="Producto 12">
-                <h4 class="text-product">Jean oxford liso negro</h4>
-                <p>$5799</p>
-                <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="product-card">
-                <img src="../img/jeans/jeansdos.jpg" alt="Producto 13">
-                <h4 class="text-product">Jean acampanado celeste</h4>
-                <p>$5700</p>
-                <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-              </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/jeans/jeanstres.jpg" alt="Producto 14">
-                  <h4 class="text-product">Jean estilo babucha baige</h4>
-                  <p>$6500</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/jeans/jeanscuatro.jpg" alt="Producto 15">
-                  <h4 class="text-product">Jean vintage</h4>
-                  <p>$5700</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/jeans/jeanscinco.jpg" alt="Producto 16">
-                  <h4 class="text-product">Jean tiro alto oscuro roto</h4>
-                  <p>$7000</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/jeans/jeansseis.jpg" alt="Producto 17">
-                  <h4 class="text-product">Jean acampanado con strass</h4>
-                  <p>$5200</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
+          <div class="row" id="productos-container"></div>
       </section>
       <hr class="linea-divisora">
       <footer>
@@ -123,6 +75,7 @@
           </div>
         </div>
       </footer>   
+      <script src="../index.js"></script>
       <script src="../js/bootstrap.bundle.min.js"></script>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>

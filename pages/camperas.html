@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-categoria="camperas">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="../index.html">MALARIA</a>
@@ -39,47 +39,7 @@
       <section id="shop">
         <h1 data-aos="zoom-in-down" class="title-shop"><strong>CAMPERAS</strong></h1>
         <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="product-card">
-                <img src="../img/camperas/camperasuno.jpg" alt="Producto 7">
-                <h4 class="text-product">Campera kinnestorm roja</h4>
-                <p>$8500</p>
-                <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-              </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/camperas/camperasdos.jpg" alt="Producto 8">
-                  <h4 class="text-product">Campera de cuero clasica</h4>
-                  <p>$8599</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/camperas/camperastres.jpg" alt="Producto 9">
-                  <h4 class="text-product">Campera de cuero corta</h4>
-                  <p>$7900</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/camperas/camperascuatro.jpg" alt="Producto 10">
-                  <h4 class="text-product">Saco de lana</h4>
-                  <p>$7300</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="product-card">
-                  <img src="../img/camperas/camperascinco.jpg" alt="Producto 11">
-                  <h4 class="text-product">Blaizzer rojo largo</h4>
-                  <p>$8699</p>
-                  <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                </div>
-              </div>
+          <div class="row" id="productos-container"></div>
       </section>
       <hr class="linea-divisora">
       <footer>
@@ -115,6 +75,7 @@
           </div>
         </div>
       </footer>   
+      <script src="../index.js"></script>
       <script src="../js/bootstrap.bundle.min.js"></script>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>
