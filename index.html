@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malariashop</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="">MALARIA</a>
+      <a class="navbar-brand" href="index.html">MALARIA</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,13 +29,35 @@
           </li>
         </ul>
         <span class="navbar-text">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#carritoModal">
               <i class="fas fa-shopping-bag"></i> 
             </a>
           </span>
       </div>
     </div>
   </nav>
+  <div class="modal fade" id="carritoModal" tabindex="-1" role="dialog" aria-labelledby="carritoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="carritoModalLabel">Carrito de Compras</h5>
+        </div>
+        <div class="modal-body">
+          <ul id="productosEnCarrito">
+            <!-- productos en el carrito -->
+          </ul>
+          <div class="subtotal">
+            <p>Subtotal: <span id="subtotalPrecio">$0.00</span></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cerrarCarritoModal">Cerrar</button>
+          <button type="button" id="vaciarCarrito" class="btn btn-danger">Vaciar Carrito</button>
+          <button id="finalizarCompraBtn" class="btn btn-primary">Finalizar compra</button>
+        </div>
+      </div>
+    </div>
+  </div>
       <section class="home" id="home">
         <div id="carouselExampleCaptions" class="carousel slide" style="max-width: 100%;">
             <div class="carousel-indicators">
@@ -82,19 +104,19 @@
                 <div data-aos="fade-right" class="col-md-4">
                   <div class="cuadrado">
                     <img src="./img/buzos.jpg" class="img-productos" alt="Buzos">
-                    <a href="./pages/buzos.html" class="btn-ver">Ver</a>
+                    <a href="buzos.html" class="btn-ver">Ver</a>
                   </div>
                 </div>
                 <div data-aos="fade-up" class="col-md-4">
                   <div class="cuadrado">
                     <img src="./img/remeras.jpg" class="img-productos" alt="Remeras">
-                    <a href="./pages/remeras.html" class="btn-ver">Ver</a>
+                    <a href="remeras.html" class="btn-ver">Ver</a>
                   </div>
                 </div>
                 <div data-aos="fade-left" class="col-md-4">
                   <div class="cuadrado">
                     <img src="./img/jeans.jpg" class="img-productos" alt="Jeans">
-                    <a href="./pages/jeans.html" class="btn-ver">Ver</a>
+                    <a href="jeans.html" class="btn-ver">Ver</a>
                   </div>
                 </div>
               </div>
@@ -102,19 +124,19 @@
                 <div data-aos="fade-right" class="col-md-4">
                   <div class="cuadrado">
                     <img src="./img/pantalones.jpg" class="img-productos" alt="Pantalones">
-                    <a href="./pages/pantalones.html" class="btn-ver">Ver</a>
+                    <a href="pantalones.html" class="btn-ver">Ver</a>
                   </div>
                 </div>
                 <div data-aos="fade-up" class="col-md-4">
                   <div class="cuadrado">
                     <img src="./img/vestidos.jpg" class="img-productos" alt="Vestidos">
-                    <a href="./pages/vestidos.html" class="btn-ver">Ver</a>
+                    <a href="vestidos.html" class="btn-ver">Ver</a>
                   </div>
                 </div>
                 <div data-aos="fade-left" class="col-md-4">
                   <div class="cuadrado">
                     <img src="./img/camperas.jpg" class="img-productos" alt="Camperas">
-                    <a href="./pages/camperas.html" class="btn-ver">Ver</a>
+                    <a href="camperas.html" class="btn-ver">Ver</a>
                   </div>
                 </div>
               </div>
@@ -122,21 +144,21 @@
           </section>
           <section data-aos="fade-down" class="contacto" id="contacto">
             <div class="container">
-              <h2 class="title-contacto"><strong>NUESTRO NEWSLETTER</strong></h2>
-              <div class="newsletter">
-                <h3 class="subtitulo-newsletter"><strong>Inscríbete para recibir nuestras últimas novedades</strong></h3>
-                <form class="formulario-newsletter">
-                  <div class="mb-3">
-                    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
-                  </div>
-                  <div class="mb-3">
-                    <input type="email" class="form-control" id="email" placeholder="Correo electrónico">
-                  </div>
-                  <button type="submit" class="btn btn-primary">INSCRIBIRSE</button>
-                </form>
-              </div>
+                <h2 class="title-contacto"><strong>NUESTRO NEWSLETTER</strong></h2>
+                <div class="newsletter">
+                    <h3 class="subtitulo-newsletter"><strong>Inscríbete para recibir nuestras últimas novedades</strong></h3>
+                    <form class="formulario-newsletter" id="newsletter-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Correo electrónico">
+                        </div>
+                        <button type="submit" class="btn btn-primary">INSCRIBIRSE</button>
+                    </form>
+                </div>
             </div>
-          </section>
+        </section>
           <hr class="linea-divisora">
           <footer>
             <h2 data-aos="fade-down" class="title-footer"><strong>SEGUINOS</strong></h2>
@@ -171,6 +193,8 @@
               </div>
             </div>
           </footer>   
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
           <script src="index.js"></script>
           <script src="./js/bootstrap.bundle.min.js"></script>
           <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

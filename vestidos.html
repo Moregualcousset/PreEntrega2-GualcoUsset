@@ -5,39 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malariashop</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
 </head>
-<body data-categoria="buzos">
+<body data-categoria="vestidos">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="../index.html">MALARIA</a>
+      <a class="navbar-brand" href="index.html">MALARIA</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.html#productos">Productos</a>
+            <a class="nav-link" aria-current="page" href="index.html#productos">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../index.html#contacto">Contacto</a>
+            <a class="nav-link" href="index.html#contacto">Contacto</a>
           </li>
         </ul>
         <span class="navbar-text">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#carritoModal">
               <i class="fas fa-shopping-bag"></i> 
             </a>
           </span>
       </div>
     </div>
   </nav>
+  <div class="modal fade" id="carritoModal" tabindex="-1" role="dialog" aria-labelledby="carritoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="carritoModalLabel">Carrito de Compras</h5>
+        </div>
+        <div class="modal-body">
+          <ul id="productosEnCarrito">
+            <!-- productos en el carrito -->
+          </ul>
+          <div class="subtotal">
+            <p>Subtotal: <span id="subtotalPrecio">$0.00</span></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cerrarCarritoModal">Cerrar</button>
+          <button type="button" id="vaciarCarrito" class="btn btn-danger">Vaciar Carrito</button>
+          <button id="finalizarCompraBtn" class="btn btn-primary">Finalizar compra</button>
+        </div>
+      </div>
+    </div>
+  </div>
       <section id="shop">
-        <h1 data-aos="zoom-in-down" class="title-shop"><strong>BUZOS</strong></h1>
+        <h1 data-aos="zoom-in-down" class="title-shop"><strong>VESTIDOS</strong></h1>
         <div class="container">
           <div class="row" id="productos-container"></div>
       </section>
@@ -74,9 +97,12 @@
             </div>
           </div>
         </div>
-      </footer>   
-      <script src="../index.js"></script>
-      <script src="../js/bootstrap.bundle.min.js"></script>
+      </footer>  
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="index.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>
         AOS.init();
